@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Eventos Inline</title>
+    </head>
+<body>
+   
+       <button onclick="mostraAlerta()">Me pressione</button>
+       
+       <div class="box"></div>
+  
+   <script>
+       function mostraAlerta(){
+           alert('Criando quadrado vermelho');
+
+           var boxElement = document.createElement('div');
+
+            boxElement.style.width = 100;
+            boxElement.style.height = 100;
+            boxElement.style.background = '#f00';
+            boxElement.style.margin = 20;
+            document.querySelector('.box').appendChild(boxElement)
+            
+       }
+       
+    </script> 
+</body>
+</html>

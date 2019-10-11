@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Módulo 02 - 1º exercício</title>
+    </head>
+    <body>
+        <button class="botao">Adicionar quadrado</button>
+        <div id="quadrados"></div>
+
+        <script>
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+ 
+            var btnElement = document.querySelector('button.botao');
+            var quadradosDiv = document.getElementById('quadrados');
+            
+            btnElement.onclick = function() {
+                var quadrado = document.createElement('div');
+                quadrado.style.height = 100;
+                quadrado.style.width = 100;
+                quadrado.style.backgroundColor = '#f00';
+                quadrado.style.margin = 20;
+                //quadradosDiv.appendChild(quadrado);
+
+                quadrado.onmouseover = function() {
+                    quadrado.style.backgroundColor = getRandomColor();
+                }
+                quadradosDiv.appendChild(quadrado);
+            }
+        </script>
+    </body>
+</html>
