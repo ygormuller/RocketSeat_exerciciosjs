@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício3</title>
+    </head>
+    <body>
+        <ul id="lista"></ul>
+        <script>
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        var list= document.querySelector('#lista');//retorna apenas um objeto através de um seletor CSS.
+            nomes.forEach(function(name) {
+            var listElement = document.createElement('li');//Retorna o primeiro elemento dentro do documento 
+                listElement.innerText = name;//Usada como getter, retorna de maneira aproximada o texto que o 
+                //usuário obteria caso tivesse selecionado o conteúdo e copiado para a área de transferência.
+                list.appendChild(listElement);
+            })
+        </script>
+        
+    </body>
+</html>

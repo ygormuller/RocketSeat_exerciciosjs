@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercício4</title>
+    </head>
+    <body>
+        <ul id="lista"></ul>
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
+        <script>
+        
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            var list= document.querySelector('#lista');
+            var inputElement = document.querySelector('input');
+
+            
+            function createListElement(name) {
+            var listElement = document.createElement('li');
+            listElement.innerText = name; 
+            list.appendChild(listElement);
+            }
+
+            nomes.forEach(function(name) {
+                createListElement(name);
+            })
+
+            function adicionar(){
+                var name = inputElement.value;
+                createListElement(name);
+                inputElement.value = ''; //apagando elemento do input
+            }
+
+        </script>
+        
+    </body>
+</html>
